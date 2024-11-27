@@ -1,0 +1,85 @@
+.stats-section {
+    display: flex;  
+    padding: 20px;
+    background-color: rgba(208, 230, 237, 0.162); 
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(106, 137, 167, 0.1);
+    animation-name: myAnim;
+    animation-duration: 2s;
+}
+
+  .stat-item {
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  .stat-item:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon {
+    font-size: 40px;
+  }
+  
+  .icon1 {
+    color: #ff5733;
+  }
+  
+  .icon2 {
+    color: #33ff57;
+  }
+  
+  .icon3 {
+    color: #3357ff;
+  }
+  
+  .icon4 {
+    color: #ff33a6;
+  }
+
+
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}

@@ -1,0 +1,34 @@
+.animate-text {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-image {
+  opacity: 0.5;
+  animation: fadeIn 1.5s ease-out forwards, growIn 1s ease-out forwards;
+  transform: scale(0.5);
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 75%;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes growIn {
+  to {
+    transform: scale(1);
+  }
+}
+
