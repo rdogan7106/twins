@@ -36,7 +36,7 @@ const ComparedImages = () => {
             {savedImages.length === 0 ? (
                 <p>No saved images found.</p>
             ) : (
-                <div className="d-flex flex-wrap justify-content-between mx-3">
+                <div className="d-flex flex-wrap justify-content-center mx-3">
                     {savedImages.map((img, index) => (
                         <div key={index} className="card m-2 w-25"> 
                             <img src={img.comparison_image.image_data} className="card-img-top" alt="Saved" />

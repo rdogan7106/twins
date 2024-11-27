@@ -96,5 +96,18 @@ const GetUser = async () => {
       console.error('Error fetching user data:', error);
     }
   };
+  const ComparedImagesFetch = async () => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await axios.get('http://localhost:5000/user-comparisons', {
+        headers: {
+          'Authorization': token
+        }
+      });
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching user data:', error);
+    }
+  };
 
-export { login, getProtectedData, createUser, logout, DeleteUser , GetUser};
+export { login, getProtectedData, createUser, logout, DeleteUser , GetUser ,ComparedImagesFetch};

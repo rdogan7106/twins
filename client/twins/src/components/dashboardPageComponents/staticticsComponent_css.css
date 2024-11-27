@@ -1,0 +1,13 @@
+.metrics-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    text-align: center; 
+  }
+  
+  @media (max-width: 768px) {
+    .metrics-box {
+      width: 100%; 
+    }
+  }

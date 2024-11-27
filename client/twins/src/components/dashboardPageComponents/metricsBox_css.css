@@ -1,0 +1,23 @@
+.metrics-box {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    text-align: left;
+  }
+ 
+  .metrics-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+  }
+ 
+  .metrics-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .metrics-change {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  

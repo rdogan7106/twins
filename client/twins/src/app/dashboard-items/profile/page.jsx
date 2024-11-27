@@ -14,6 +14,7 @@ const ProfilePage = () => {
         setImageSrc(currentUser?.self_image || null);
         setCurrentUser(user);
     }, [user]);
+    console.log(currentUser);
 
     const [imageSrc, setImageSrc] = useState(currentUser?.self_image || null);
     const [isCameraActive, setIsCameraActive] = useState(false);
@@ -23,7 +24,6 @@ const ProfilePage = () => {
     const [current_password, setCurrentPassword] = useState("");
     const [password, setPassword] = useState("");
 
-    // Handle Capture (Webcam)
     const handleCapture = async () => {
         if (!isCameraActive) {
             setIsCameraActive(true);
@@ -36,7 +36,6 @@ const ProfilePage = () => {
         setIsLoading(false);
     };
 
-    // Handle Upload (File Input)
     const handleUpload = (event) => {
         const file = event.target.files[0];
         if (!file) return;
@@ -48,7 +47,6 @@ const ProfilePage = () => {
         reader.readAsDataURL(file);
     };
 
-    // Handle Save Image
     const handleSaveImage = async () => {
         try {
             const token = localStorage.getItem("token");
@@ -110,10 +108,10 @@ const ProfilePage = () => {
         <div className="container mt-5">
             <div className="card shadow-lg p-4">
                 <div className="row">
-                    {/* Left Section */}
+                   
                     <div className="col-md-4 d-flex flex-column align-items-center">
                         <div style={{ position: "relative" }}>
-                            {/* Display Image or Camera */}
+                            
                             {isCameraActive ? (
                                 <Webcam
                                     audio={false}
@@ -131,7 +129,7 @@ const ProfilePage = () => {
                                 />
                             )}
                         </div>
-                        {/* Buttons */}
+                       
                         <div className="d-flex justify-content-center gap-2">
                             {!isCameraActive ? (
                                 <>
@@ -162,7 +160,6 @@ const ProfilePage = () => {
                                 </button>
                             )}
                         </div>
-                        {/* Save Image */}
                         <button
                             className="btn btn-success mt-3"
                             onClick={handleSaveImage}
@@ -172,7 +169,6 @@ const ProfilePage = () => {
                         </button>
                     </div>
 
-                    {/* Right Section */}
                     <div className="col-md-8">
                         <h4>User Information</h4>
                         <hr />
@@ -198,7 +194,6 @@ const ProfilePage = () => {
                         </div>
                         <></>
 
-                        {/* Password Update Section */}
                         <div className="mb-3">
                             <label className="form-label">Password</label>
                             {!updatePasswordClicked ? (
@@ -249,7 +244,6 @@ const ProfilePage = () => {
                             )}
                         </div>
 
-                        {/* Toggle Button for Password Update */}
                         {!updatePasswordClicked && (
                             <button
                                 className="btn btn-success m-2"
@@ -258,8 +252,6 @@ const ProfilePage = () => {
                                 Update Your Password
                             </button>
                         )}
-
-                        {/* Delete Account */}
 
                         <button className="btn btn-danger m-2" onClick={() => deleteAccount()}>Delete Your Account</button>
                     </div>

@@ -8,7 +8,7 @@ import StatistisSection from "@/components/homePageComponents/statisticsComponen
 import TryToCompareComponent from "@/components/homePageComponents/tryToCompareComponent/tryToCompareComponent";
 import Testimonials from "@/components/homePageComponents/testimonalComponents/testimonalComponent";
 import ContactComponet  from "@/components/homePageComponents/contactComponent/contactComponent";
-import { NavbarComponent } from "@/components/navbar";
+import FooterComponent from "@/components/footerComponent";
 export default function Home() {
   const { userIsLoggedIn, setUserIsLoggedIn } = useContext(AppContext);
 
@@ -20,7 +20,6 @@ export default function Home() {
         <TryToCompareComponent/>
         <Testimonials/> 
         <ContactComponet/>
-
       </div>
     </AppContext.Provider>
   );
