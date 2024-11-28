@@ -1,53 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import MetricsBox from './metricsBox';
-import axios from 'axios';
 
-const StaticticsComponent = () => {
-  const [doubleImages, setDoubleImages] = useState([]);
-  const [userExpressions, setUserExpressions] = useState({});
-  const [bestMatch, setBestMatch] = useState(null);
-  const [errorMessage, setErrorMessage] = useState('');
+const StaticticsComponent = ({ doubleImages }) => {
+  const calculateStatistics = () => {
+    const bestMatch = doubleImages.reduce(
+      (best, current) =>
+        current.similarity_score > (best?.similarity_score || 0) ? current : best,
+      null
+    );
 
-  const fetchDoubleImages = async () => {
-    try {
-      const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/comparison-details', {
-        headers: {
-          Authorization: token,
-        },
-      });
-  
-      const data = response.data; 
-      console.log(data);
-  
-      if (data.length > 0) {
-        setDoubleImages(data);
-  
-        const bestComparison = data.reduce((best, current) =>
-          current.similarity_score > (best?.similarity_score || 0) ? current : best
-        );
-        setBestMatch(bestComparison);
-  
-        const expressionsCount = data.reduce((acc, img) => {
-          const userEmotion = img.user_uploaded_image?.emotion;
-          if (userEmotion) {
-            acc[userEmotion] = (acc[userEmotion] || 0) + 1; 
-          }
-          return acc;
-        }, {});
-        setUserExpressions(expressionsCount);
-      } else {
-        setErrorMessage('Data cannot be found.');
+    const userExpressions = doubleImages.reduce((acc, img) => {
+      const userEmotion = img.user_uploaded_image?.emotion;
+      if (userEmotion) {
+        acc[userEmotion] = (acc[userEmotion] || 0) + 1;
       }
-    } catch (error) {
-      console.error('Error fetching data:', error);
-      setErrorMessage('Data cannot be found...');
-    }
+      return acc;
+    }, {});
+
+    return { bestMatch, userExpressions };
   };
-  
-  useEffect(() => {
-    fetchDoubleImages();
-  }, []);
+
+  const { bestMatch, userExpressions } = calculateStatistics();
 
   return (
     <div className="admin-panel m-5">
@@ -79,10 +52,8 @@ const StaticticsComponent = () => {
           />
         </div>
       </div>
-      {errorMessage && <p className="text-danger mt-3">{errorMessage}</p>}
     </div>
   );
-  
 };
 
 export default StaticticsComponent;

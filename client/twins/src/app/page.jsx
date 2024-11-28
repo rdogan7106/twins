@@ -8,13 +8,12 @@ import StatistisSection from "@/components/homePageComponents/statisticsComponen
 import TryToCompareComponent from "@/components/homePageComponents/tryToCompareComponent/tryToCompareComponent";
 import Testimonials from "@/components/homePageComponents/testimonalComponents/testimonalComponent";
 import ContactComponet  from "@/components/homePageComponents/contactComponent/contactComponent";
-import FooterComponent from "@/components/footerComponent";
 export default function Home() {
   const { userIsLoggedIn, setUserIsLoggedIn } = useContext(AppContext);
 
   return (
     <AppContext.Provider  value={{ userIsLoggedIn, setUserIsLoggedIn }} >
-      <div className="p-5" >            
+      <div className="p-5 pb-0" >            
         <HeroComponent />  
         <StatistisSection/>
         <TryToCompareComponent/>

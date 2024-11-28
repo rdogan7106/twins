@@ -22,7 +22,7 @@ export const NavbarComponent = () => {
     router.push('/');
   }
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light px-5 shadow-sm  mt-2 rounded mx-5">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light px-5 shadow-sm  mt-2 rounded mx-5" id='navbar'>
       <div className="container-fluid d-flex justify-content-center align-items-center py-3">
         <a className="navbar-brand d-flex align-items-center mx-4" >
           <img src="logo.png" alt="Logo" style={{ width: '10%', height: '10%', borderRadius: '50%', boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)' }} />

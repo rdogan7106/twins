@@ -1,7 +1,7 @@
 "use client"
 export const footerComponent = () => {
     return (      
-        <footer className="d-flex flex-column justify-content-center align-items-center py-3 my-4 border-top">
+        <footer className="d-flex flex-column justify-content-center align-items-center py-3 border-top">
         <div className="d-flex flex-column align-items-center">
           <a
             href="/"

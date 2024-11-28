@@ -1,6 +1,6 @@
 "use client";
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { GetUser } from "@/api/api"; 
+import { GetUser /* ,fetchSingleImages ,fetchDoubleImages */ } from "@/api/api"; 
 
 export const AppContext = createContext();
 
@@ -13,7 +13,7 @@ export const AppProvider = ({ children }) => {
     if (token) {
       const fetchUser = async () => {
         try {
-          const userData = await GetUser();
+          const userData = await GetUser();          
           setUser(userData.user);
           setUserIsLoggedIn(true);
         } catch (error) {

@@ -18,7 +18,6 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Burada form gönderme işlemi yapılabilir (API çağrısı vb.)
     alert('Message Sent!');
   };
 

@@ -12,7 +12,7 @@ const heroComponent = () => {
             <i className="bi bi-gear"></i>A Social Media App
           </span>
           <h1 className="display-4 fw-bold text-dark">
-            Maecenas Vitae Consectetur <br/>
+            A New Social Network... <br/>
             <span className="text-primary">Meet Us</span>
           </h1>
           <p className="text-muted">

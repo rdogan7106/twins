@@ -19,8 +19,6 @@ const login = async (username, password) => {
     throw error.response ? error.response.data : new Error('Network error');
   }
 };
-
-
 const logout = () => {
     const token = localStorage.getItem('token');
     if (token) {
@@ -40,7 +38,6 @@ const logout = () => {
         }
     }
 };
-
 const getProtectedData = async () => {
     const token = localStorage.getItem('token');
     try {
@@ -54,7 +51,6 @@ const getProtectedData = async () => {
         console.error('Access denied!', error);  
     }
 };
-
 const createUser = async (username, password, email) => {
     try {
         const response = await axios.post(`${API_URL}/createuser`, {
@@ -69,7 +65,6 @@ const createUser = async (username, password, email) => {
         throw error.response ? error.response.data : new Error('Network error');
     }
 };
-
 const DeleteUser = async (id) => {
     try {
       const token = localStorage.getItem('token');
@@ -82,7 +77,7 @@ const DeleteUser = async (id) => {
     } catch (error) {
       console.error('Error deleting comparison:', error);
     }
-  };
+};
 const GetUser = async () => {
     try {
       const token = localStorage.getItem('token');
@@ -95,8 +90,8 @@ const GetUser = async () => {
     } catch (error) {
       console.error('Error fetching user data:', error);
     }
-  };
-  const ComparedImagesFetch = async () => {
+};
+const fetchSingleImages = async () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.get('http://localhost:5000/user-comparisons', {
@@ -110,4 +105,18 @@ const GetUser = async () => {
     }
   };
 
-export { login, getProtectedData, createUser, logout, DeleteUser , GetUser ,ComparedImagesFetch};
+  const fetchDoubleImages = async () => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await axios.get('http://localhost:5000/comparison-details', {
+        headers: {
+          'Authorization': token
+        }
+      });
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching user data:', error);
+    }
+  };
+
+export { login, getProtectedData, createUser, logout, DeleteUser , GetUser ,fetchSingleImages,fetchDoubleImages};
