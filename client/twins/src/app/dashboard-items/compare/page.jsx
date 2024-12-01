@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import ProfilComponent from '@/components/comparePageComponents/profilComponent.jsx';
+import ProfilComponent from '../../../components/comparePageComponents/profilComponent.jsx';
 import axios from 'axios';
 
 const Compare = () => {

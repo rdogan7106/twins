@@ -1,8 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from "react";
-import axios from 'axios';
-import { DeleteUser } from '@/api/api';
+import React from "react";
 
 const ComparedImages = ({images,onDelete}) => {
     return (

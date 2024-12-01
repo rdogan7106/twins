@@ -77,16 +77,6 @@ const tryToCompareComponent = () => {
                                     className="img-fluid"
                                 />
                             </div>
-                            {/* {analysisResult && analysisResult.face_3d ? (
-                                      <Face3DViewer face3DData={analysisResult.face_3d} />
-                            ) : (<div className="small-image">
-                                <img
-                                    src={smallImageSrc}
-                                    alt="Small"
-                                    className="img-fluid"
-                                />
-                            </div>
-                            )} */}
                             
                         </div>
                         <button className="btn btn-primary try-button mt-3" onClick={handleTryClick}>

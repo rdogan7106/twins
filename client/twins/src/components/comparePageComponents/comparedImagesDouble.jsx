@@ -1,5 +1,5 @@
 import React from 'react';
-import ComparisonCardDouble from '@/components/comparePageComponents/comprasionCardDouble';
+import ComparisonCardDouble from '../../components/comparePageComponents/comprasionCardDouble';
 
 const ComparedImagesDouble = ({ images ,onDelete}) => {
   return (

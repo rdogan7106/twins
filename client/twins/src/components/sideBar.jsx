@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext } from 'react';
-import { AppContext } from '@/context/AppContext';
+import { AppContext } from '../context/AppContext';
 const SideBar = ({ setCurrentView }) => {
     const { user } = useContext(AppContext);
 

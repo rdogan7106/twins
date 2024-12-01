@@ -2,7 +2,7 @@
 import React, { useState, useRef, useContext, useEffect } from "react";
 import Webcam from "react-webcam";
 import axios from "axios";
-import { AppContext } from "@/context/AppContext";
+import { AppContext } from "../../../context/AppContext";
 import { useRouter } from 'next/navigation';
 
 

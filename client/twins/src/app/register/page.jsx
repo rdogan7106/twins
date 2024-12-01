@@ -1,9 +1,9 @@
 "use client";
 import React, { useState,useContext } from "react";
 import { useRouter } from "next/navigation";
-import RegisterForm from "@/components/RegisterForm";
-import { createUser } from "@/api/api";
-import { AppContext } from "@/context/AppContext";
+import RegisterForm from "../../components/RegisterForm";
+import { createUser } from "../../api/api";
+import { AppContext } from "../../context/AppContext";
 
 const Register = () => {
     const [username, setUsername] = useState('');

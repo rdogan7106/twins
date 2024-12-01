@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
-import SideBar from "@/components/SideBar";
-import Compare from "@/app/dashboard-items/compare/page";
-import Profile from "@/app/dashboard-items/profile/page";
-import Dashboard from "@/app/dashboard-items/dashboard/dashboard";
+import SideBar from "../../components/SideBar";
+import Compare from "../../app/dashboard-items/compare/page";
+import Profile from "../../app/dashboard-items/profile/page";
+import Dashboard from "../../app/dashboard-items/dashboard/dashboard";
 
 const DashboardItems = () => {
     const [currentView, setCurrentView] = useState("dashboard");

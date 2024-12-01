@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useContext } from 'react'
-import { AppContext } from '@/context/AppContext';
-import LoginForm from '@/components/loginForm'
+import { AppContext } from '../../context/AppContext';
+import LoginForm from '../../components/loginForm'
 import { useRouter } from 'next/navigation';
-import { login } from '@/api/api';
+import { login } from '../../api/api';
 
 const Login = () => {
     const router = useRouter(); 

@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext } from 'react';
-import { AppContext } from '@/context/AppContext';
+import { AppContext } from '../context/AppContext';
 import { useRouter } from 'next/navigation';
 
 export const NavbarComponent = () => {

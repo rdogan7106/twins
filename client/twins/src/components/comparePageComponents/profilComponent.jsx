@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import Webcam from 'react-webcam';
-import axios from 'axios';
 
 const ProfilComponent = ({ imageSrc, setImageSrc, predictions, setPredictions, isLeft }) => {
     const [isLoading, setIsLoading] = useState(false);

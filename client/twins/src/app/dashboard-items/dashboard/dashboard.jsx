@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ComparedImages from '@/components/comparePageComponents/comparedImages';
-import ComparedImagesDouble from '@/components/comparePageComponents/comparedImagesDouble';
-import StaticticsComponent from '@/components/dashboardPageComponents/staticticsComponent';
-import { DeleteUser } from '@/api/api';
+import ComparedImages from '../../../components/comparePageComponents/comparedImages';
+import ComparedImagesDouble from '../../../components/comparePageComponents/comparedImagesDouble';
+import StaticticsComponent from '../../../components/dashboardPageComponents/staticticsComponent';
+import { DeleteUser } from '../../../api/api';
 const Dashboard = () => {
   const [selectedOption, setSelectedOption] = useState('single');
   const [singleImagesData, setSingleImagesData] = useState([]);

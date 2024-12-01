@@ -1,6 +1,6 @@
 "use client";
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { GetUser /* ,fetchSingleImages ,fetchDoubleImages */ } from "@/api/api"; 
+import { GetUser } from "../api/api"; 
 
 export const AppContext = createContext();
 
