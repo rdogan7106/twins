@@ -21,6 +21,9 @@ export const NavbarComponent = () => {
   const handleHomePageClick = () => {
     router.push('/');
   }
+  const handleDashboardClick = () => {
+    router.push('/dashboard-items');
+  }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light px-5 shadow-sm  mt-2 rounded mx-5" id='navbar'>
       <div className="container-fluid d-flex justify-content-center align-items-center py-3">
@@ -47,6 +50,11 @@ export const NavbarComponent = () => {
               <li className="nav-item">
                 <a className="navbar-brand d-flex align-items-center mx-4" onClick={handleHomePageClick}  >
                   <i className="bi bi-person me-2"></i> Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="navbar-brand d-flex align-items-center mx-4" onClick={handleDashboardClick}  >
+                  <i className="bi bi-person me-2"></i> Dashboard
                 </a>
               </li>
               <li className="nav-item">

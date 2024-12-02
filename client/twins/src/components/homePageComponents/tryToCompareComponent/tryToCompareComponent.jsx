@@ -66,19 +66,29 @@ const tryToCompareComponent = () => {
                     ) : ( <div className="image-container position-relative">
                         <div className="large-image">
                             <img
-                                src={largeImageSrc}
+                                src={smallImageSrc}
                                 alt="Large"
                                 className="img-fluid rounded shadow"
                             />
                             <div className="small-image">
                                 <img
-                                    src={smallImageSrc}
+                                    src={largeImageSrc}
                                     alt="Small"
                                     className="img-fluid"
                                 />
                             </div>
                             
                         </div>
+                        {analysisResult && (
+                             <div className="overlay"> 
+                             <span className="text-primary">Predicted  &nbsp; </span>
+                             <span className="text-primary">Age: {analysisResult?.predictions.age}  &nbsp;</span>
+                             <span className="text-primary">Gender :  {analysisResult?.predictions.gender}   &nbsp;</span>
+                             <span className="text-primary">Expression : {analysisResult?.predictions.expression}  &nbsp;</span>
+                             <span className="text-primary">Etnicity :{analysisResult?.predictions.ethnicity}</span>
+                         </div>
+                        )}
+                       
                         <button className="btn btn-primary try-button mt-3" onClick={handleTryClick}>
                             Try
                         </button>
@@ -87,22 +97,22 @@ const tryToCompareComponent = () => {
                 </div>
                 <div className="col-md-6 px-5">
                     <h6 className="text-primary mb-3">MORE ABOUT US</h6>
-                    <h2 className="fw-bold">Voluptas enim suscipit temporibus</h2>
+                    <h2 className="fw-bold">Twins is a new social network</h2>
                     <p className="text-muted">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam.
+                    The aim is to enable people who are similar to each other to meet and become friends.
+                    Twins app performs facial analysis with artificial intelligence and calculates similarity rates.
                     </p>
                     <ul className="list-unstyled text-primary">
-                        <li>✔️ Lorem ipsum dolor sit amet</li>
-                        <li>✔️ Consectetur adipiscing elit</li>
-                        <li>✔️ Sed do eiusmod tempor</li>
-                        <li>✔️ Incididunt ut labore et</li>
-                        <li>✔️ Dolore magna aliqua</li>
-                        <li>✔️ Ut enim ad minim veniam</li>
+                        <li>✔️ Register yourself</li>
+                        <li>✔️ Save your photo</li>
+                        <li>✔️ Compare yourself</li>
+                        <li>✔️ See the results</li>
+                        <li>✔️ Send friend request</li>
+                        <li>✔️ Meet your friends</li>
                     </ul>
                     <div className="author-info mt-4">
                         <p>
-                            <strong>Mario Smith</strong> <br />
+                            <strong>Rahman Dogan & Veton Shala</strong> <br />
                             <span className="text-muted">CEO & Founder</span>
                         </p>
                         <p>
